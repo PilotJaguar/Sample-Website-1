@@ -650,11 +650,12 @@ section {
   justify-content: space-between;
   position: relative;
   transition: transform 1.5s;
-  flex-direction: column; /* Stacks items vertically */
-  margin-bottom: 1rem; /* Adds space only between items */
+  flex-direction: row;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
 }
 .contact-content-con .left-contact .contact-info .contact-item p {
-  margin: 0.3rem 0 !important;
+  margin: 0 !important;
   padding: 0 !important;
 }
 .contact-content-con .left-contact .contact-info .contact-item:hover {
@@ -812,6 +813,20 @@ section {
 }
 
 /* Responsive Breakpoints */
+@media screen and (max-width: 1400px) {
+    section {
+        padding: 2rem 12rem;
+    }
+    
+    .header-content .right-header {
+        padding-right: 12rem;
+    }
+    
+    .about-container .left-about {
+        padding-right: 3rem;
+    }
+}
+
 @media screen and (max-width: 1200px) {
     html {
         font-size: 95%;
@@ -886,6 +901,42 @@ section {
         margin-left: 0;
         margin-top: 2rem;
     }
+
+    .contact-content-con .left-contact .contact-info .contact-item {
+        flex-direction: row;
+        padding: 0.8rem;
+        margin-bottom: 0.8rem;
+    }
+    
+    .contact-content-con .left-contact .contact-info .contact-item .icon {
+        grid-template-columns: 35px 1fr;
+    }
+    
+    .contact-content-con .left-contact .contact-info .contact-item .icon i {
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    section {
+        padding: 2rem 6rem;
+    }
+    
+    .about-container .right-about {
+        grid-template-columns: 1fr;
+    }
+    
+    .portfolios {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .blogs {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .timeline {
+        grid-template-columns: 1fr;
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -936,6 +987,25 @@ section {
         margin-left: 0;
     }
 
+    .contact-content-con .left-contact .contact-info .contact-item {
+        flex-direction: row;
+        padding: 0.6rem;
+        margin-bottom: 0.6rem;
+        font-size: 0.9rem;
+    }
+    
+    .contact-content-con .left-contact .contact-info .contact-item .icon {
+        grid-template-columns: 30px 1fr;
+    }
+    
+    .contact-content-con .left-contact .contact-info .contact-item .icon i {
+        font-size: 1.1rem;
+    }
+    
+    .contact-content-con .left-contact h4 {
+        font-size: 1.8rem;
+    }
+
     /* Mobile Menu Controls Animation */
     .controlls {
         top: auto;
@@ -961,20 +1031,9 @@ section {
     .controlls .control:hover {
         transform: scale(1.1) translateY(-5px);
     }
-
-    @keyframes slideUp {
-        0% {
-            transform: translate(-50%, 100%);
-            opacity: 0;
-        }
-        100% {
-            transform: translate(-50%, 0);
-            opacity: 1;
-        }
-    }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 576px) {
     html {
         font-size: 85%;
     }
@@ -1052,7 +1111,26 @@ section {
     }
 
     .contact-content-con .left-contact .contact-info .contact-item {
+        flex-direction: row;
         padding: 0.5rem;
+        margin-bottom: 0.5rem;
+        font-size: 0.85rem;
+    }
+    
+    .contact-content-con .left-contact .contact-info .contact-item .icon {
+        grid-template-columns: 25px 1fr;
+    }
+    
+    .contact-content-con .left-contact .contact-info .contact-item .icon i {
+        font-size: 1rem;
+    }
+    
+    .contact-content-con .left-contact h4 {
+        font-size: 1.5rem;
+    }
+    
+    .contact-content-con .left-contact p {
+        font-size: 0.9rem;
     }
 
     .theme-btn {
@@ -1091,5 +1169,40 @@ section {
 
     .controlls .active-btn {
         animation: pulseControl 2s infinite;
+    }
+}
+
+/* Additional breakpoint for very small devices */
+@media screen and (max-width: 400px) {
+    html {
+        font-size: 80%;
+    }
+    
+    section {
+        padding: 1rem;
+    }
+    
+    .header-content .right-header .name {
+        font-size: 1.5rem !important;
+    }
+    
+    .main-title h2 {
+        font-size: 1.8rem;
+    }
+    
+    .main-title h2 .bg-text {
+        font-size: 2.2rem;
+    }
+    
+    .contact-content-con .left-contact h4 {
+        font-size: 1.3rem;
+    }
+    
+    .contact-content-con .left-contact .contact-info .contact-item {
+        font-size: 0.8rem;
+    }
+    
+    .contact-content-con .left-contact .contact-info .contact-item .icon i {
+        font-size: 0.9rem;
     }
 }
